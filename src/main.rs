@@ -28,7 +28,7 @@ fn main() {
             }
         } else {
             let error_message = String::from_utf8_lossy(&output.stderr);
-            eprintln!("Fehler: {}", error_message);
+            eprintln!("err: {}", error_message);
         }
         thread::sleep(sleep_duration);
     }
