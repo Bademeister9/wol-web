@@ -40,7 +40,7 @@ fn send_wake_on_lan_packet(mac_address: &str) {
         .expect("error to execute wakeonlan");
 
     if output.status.success() {
-        println!("Wake-on-LAN sendt to {}", mac_address);
+        println!("Wake-on-LAN sent to {}", mac_address);
     } else {
         let error_message = String::from_utf8_lossy(&output.stderr);
         eprintln!("error sending wakeonlan: {}", error_message);
